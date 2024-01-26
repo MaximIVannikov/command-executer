@@ -31,7 +31,7 @@ class FfmpegExecutor extends command_executor_1.CommandExecutor {
             return { width, height, path, name };
         });
     }
-    buid({ width, height, path, name }) {
+    build({ width, height, path, name }) {
         const output = this.fileService.getFilePath(path, name, 'mp4');
         const args = new ffmpeg_builder_1.FfmpegBuilder().input(path).setVideoSize(width, height).output(output);
         return { command: 'ffmpeg', args, output };

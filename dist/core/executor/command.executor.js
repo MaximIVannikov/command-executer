@@ -17,7 +17,7 @@ class CommandExecutor {
     execute() {
         return __awaiter(this, void 0, void 0, function* () {
             const input = yield this.prompt();
-            const command = this.buid(input);
+            const command = this.build(input);
             const stream = this.spawn(command);
             this.processStream(stream, this.logger);
         });
